@@ -14,7 +14,11 @@ const createTree = (req, res) => {
     picture: 'www.picture.de/242dsaj',
     harvestPeriod: { start: 01 - 08, end: 30 - 09 },
     ownerId: '133Kadjsl',
-  });
+  }).then((tree) => res.send(tree));
 };
 
-module.exports = { createTree };
+const getAllTrees = (req, res) => {
+  Tree.find().then((tree) => res.send(tree));
+};
+
+module.exports = { createTree, getAllTrees };

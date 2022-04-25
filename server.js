@@ -14,6 +14,9 @@ const port = 8000;
 app.use(express.json());
 
 // routes
+app.use('/tree', require('./src/routes/tree'));
+app.use('/user', require('./src/routes/user'));
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });

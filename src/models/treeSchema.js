@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const treeSchema = new Schema({
   type: String,
-  location: Mixed,
+  location: String,
   active: Boolean,
   info: String,
   comments: Array,
