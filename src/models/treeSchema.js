@@ -3,9 +3,9 @@ const { Schema } = mongoose;
 
 const treeSchema = new Schema({
   type: String,
-  location: String,
+  location: Mixed,
   active: Boolean,
-  info: Text,
+  info: String,
   comments: Array,
   picture: String,
   harvestPeriod: { start: Date, end: Date },

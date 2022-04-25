@@ -1,13 +1,21 @@
+// packages
+const { urlencoded } = require('express');
 const express = require('express');
-require("dotenv").config();
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const app = express();
 
-const port = 3000;
+// config
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_URL);
+const port = 8000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+// middlewares
+app.use(express.json());
+
+// routes
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {
