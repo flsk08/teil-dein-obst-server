@@ -1,0 +1,192 @@
+[{
+    
+    "id": 1,
+    "coordinates": {
+        "lat": 50.928605,
+        "lng": 6.994602
+    },
+    "type": {
+        "type": "Apfel"
+        },
+    "location": { 
+        "strasse": "Am Grauen Stein 8,",
+        "plz": 51105,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "inactive"
+        }
+    },
+
+
+    
+{
+    "id": 2,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.927523,
+        "lng": 6.917642
+    },
+    "location": { 
+        "strasse": "Gleueler Str. 61",
+        "plz": 50931,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "active"
+        }
+},
+
+{
+    "id": 3,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.943966,
+        "lng": 6.952000
+    },
+    "location": { 
+        "strasse": "Auf dem Hunnenrücken 7",
+        "plz": 50668,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "active"
+        }
+
+},
+{
+    "id": 4,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.941755,
+        "lng": 6.938487
+    },
+    "location": { 
+        "strasse": "Kamekestraße 12",
+        "plz": 50672,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "active"
+        }
+
+},
+{
+    "id": 5,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.942621,
+        "lng": 6.956008
+    },
+    "location": { 
+        "strasse": "Dompropst-Ketzer-Straße 6,",
+        "plz": 50667,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "inactive"
+        }
+
+},
+{
+    "id": 6,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.934399,
+        "lng": 6.962192
+    },
+    "location": { 
+        "strasse": "Rheingasse 13",
+        "plz": 50676,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "inactive"
+        }
+
+},
+{
+    "id": 7,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.940054,
+        "lng": 6.954752
+    },
+    "location": { 
+        "strasse": "An d. Rechtschule 1",
+        "plz": 50667,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "inactive"
+        }
+
+},
+{
+    "id": 8,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.938648,
+        "lng": 6.947881
+    },
+    "location": { 
+        "strasse": "Richmodstraße 31",
+        "plz": 50667,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "inactive"
+        }
+
+},
+{
+    "id": 9,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.945051,
+        "lng": 6.961508
+    },
+    "location": { 
+        "strasse": "Johannisstraße 1",
+        "plz": 50668,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "active"
+        }
+
+},
+{
+    "id": 10,
+    "type": {
+        "type": "Apfel"
+        },
+    "coordinates": {
+        "lat": 50.945913,
+        "lng": 6.972543
+    },
+    "location": { 
+        "strasse": "Rheinparkweg 1",
+        "plz": 50679,
+        "stadt": "Köln"
+        },
+    "status": {
+        "status": "active"
+        }
+}]
