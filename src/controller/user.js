@@ -23,7 +23,7 @@ const getAllUsers = (req, res) => {
 };
 
 const getUserById = (req, res) => {
-  User.findOne({ _ownerId: req.params.id }).then((user) => res.send(user));
+  User.findOne({ id: req.params.id }).then((user) => res.send(user));
 };
 
 module.exports = { createUser, getAllUsers, getUserById };
