@@ -15,4 +15,8 @@ const getAllUsers = (req, res) => {
   User.find().then((user) => res.send(user));
 };
 
-module.exports = { createUser, getAllUsers };
+const getUserById = (req, res) => {
+  User.findOne({ _ownerId: req.params.id }).then((user) => res.send(user));
+};
+
+module.exports = { createUser, getAllUsers, getUserById };

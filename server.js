@@ -2,6 +2,7 @@
 const { urlencoded } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 
@@ -12,6 +13,7 @@ const port = 8000;
 
 // middlewares
 app.use(express.json());
+app.use(cors({ origin: '*' }));
 
 // routes
 app.use('/tree', require('./src/routes/tree'));
