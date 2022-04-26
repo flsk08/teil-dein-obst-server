@@ -1,13 +1,16 @@
 const User = require('../models/userSchema');
 
 const createUser = (req, res) => {
+  const id = req.params.id;
+  const { name, email } = req.body;
+
   User.create({
-    name: 'John Doe',
-    email: 'johndoe@johnmail.com',
-    favorites: ['235423sdfsd', '2332dassdfsa', '243dfs'],
-    registeredTrees: ['r235423sdfsd', 'r2332dassdfsa', 'r243dfs'],
-    password: '24543e34ert',
-    picture: 'www.picture.de/2222',
+    id: id,
+    name: name,
+    email: email,
+    // favorites: ['235423sdfsd', '2332dassdfsa', '243dfs'],
+    // registeredTrees: ['r235423sdfsd', 'r2332dassdfsa', 'r243dfs'],
+    // picture: 'www.picture.de/2222',
   }).then((tree) => res.send(tree));
 };
 
