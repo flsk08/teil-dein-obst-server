@@ -19,7 +19,7 @@ const treeSchema = new Schema({
   comments: Array,
   picture: String,
   harvestPeriod: { start: Date, end: Date },
-  ownerId: String,
+  userId: String,
 });
 
 module.exports = mongoose.model('Tree', treeSchema);
