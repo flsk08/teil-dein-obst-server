@@ -19,6 +19,7 @@ app.use(urlencoded({ extended: true }));
 // routes
 app.use('/tree', require('./src/routes/tree'));
 app.use('/user', require('./src/routes/user'));
+app.use('/coordinates', require('./src/routes/coordinates'));
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
