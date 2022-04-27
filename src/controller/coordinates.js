@@ -1,11 +1,9 @@
-// const fs = require('fs');
+const fs = require('fs');
 
-// const sendMockData = (req, res) => {
-//   fs.readFile('./location.json', 'utf8', (err, data) => {
-//     res.send(JSON.parse(data));
-//   });
-// };
+const sendMockData = (req, res) => {
+  fs.readFile('./location.json', 'utf8', (err, data) => {
+    res.send(JSON.parse(data));
+  });
+};
 
-// const getAllTrees = (req, res) => {};
-
-// module.exports = { getAllTrees };
+module.exports = { getAllTrees };
