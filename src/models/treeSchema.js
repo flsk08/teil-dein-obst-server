@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const treeSchema = new Schema({
-  id: String,
   type: {
     type: String,
   },
