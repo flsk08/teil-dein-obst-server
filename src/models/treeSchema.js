@@ -2,16 +2,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const treeSchema = new Schema({
-  type: {
-    type: String,
-  },
+  type: String,
   coordinates: {
-    lat: String,
-    lng: String,
+    lat: Schema.Types.Decimal128,
+    lng: Schema.Types.Decimal128,
   },
   location: {
     strasse: String,
-    plz: String,
+    plz: Number,
     stadt: String,
   },
   status: {
