@@ -6,4 +6,4 @@ const sendMockData = (req, res) => {
   });
 };
 
-module.exports = { getAllTrees };
+module.exports = { sendMockData };
