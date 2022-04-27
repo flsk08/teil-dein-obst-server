@@ -10,9 +10,6 @@ const createUser = (req, res) => {
       id: id,
       name: name,
       email: email,
-      // favorites: ['235423sdfsd', '2332dassdfsa', '243dfs'],
-      // registeredTrees: ['r235423sdfsd', 'r2332dassdfsa', 'r243dfs'],
-      // picture: 'www.picture.de/2222',
     },
     { upsert: true, new: true }
   ).then((tree) => res.send(tree));

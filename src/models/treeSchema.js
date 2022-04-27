@@ -3,13 +3,23 @@ const { Schema } = mongoose;
 
 const treeSchema = new Schema({
   type: String,
-  location: String,
-  active: Boolean,
+  coordinates: {
+    lat: Schema.Types.Decimal128,
+    lng: Schema.Types.Decimal128,
+  },
+  location: {
+    strasse: String,
+    plz: Number,
+    stadt: String,
+  },
+  status: {
+    status: String,
+  },
   info: String,
   comments: Array,
   picture: String,
   harvestPeriod: { start: Date, end: Date },
-  ownerId: String,
+  userId: String,
 });
 
 module.exports = mongoose.model('Tree', treeSchema);
