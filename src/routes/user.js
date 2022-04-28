@@ -8,4 +8,6 @@ router.post('/:id', controller.createUser);
 
 router.get('/:id', controller.getUserById);
 
+router.get('/collection/:id', controller.getAllTreesFromUser);
+
 module.exports = router;

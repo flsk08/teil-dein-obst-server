@@ -8,4 +8,6 @@ router.get('/', controller.getAllTrees);
 
 router.get('/:id', controller.getTreeById);
 
+router.get('/collection/:id', controller.getAllTreesFromUser);
+
 module.exports = router;
