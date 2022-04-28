@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const treeSchema = new Schema({
@@ -12,9 +12,7 @@ const treeSchema = new Schema({
     plz: Number,
     stadt: String,
   },
-  status: {
-    status: String,
-  },
+  active: { type: Boolean, default: true },
   info: String,
   comments: Array,
   picture: String,
@@ -22,4 +20,4 @@ const treeSchema = new Schema({
   userId: String,
 });
 
-module.exports = mongoose.model('Tree', treeSchema);
+module.exports = mongoose.model("Tree", treeSchema);
