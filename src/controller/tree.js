@@ -43,4 +43,8 @@ const getTreeById = (req, res) => {
   Tree.find({ _id: req.params.id }).then((tree) => res.send(tree));
 };
 
-module.exports = { createTree, getAllTrees, getTreeById };
+const getAllTreesFromUser = (req, res) => {
+  Tree.find({ userId: req.params.id }).then((user) => res.send(user));
+};
+
+module.exports = { createTree, getAllTrees, getTreeById, getAllTreesFromUser };
