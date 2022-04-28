@@ -16,7 +16,7 @@ const treeSchema = new Schema({
   info: String,
   comments: Array,
   picture: String,
-  harvestPeriod: { start: Date, end: Date },
+  harvestPeriod: { start: String, end: String },
   userId: String,
 });
 
