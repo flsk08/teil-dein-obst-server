@@ -23,8 +23,4 @@ const getUserById = (req, res) => {
   User.findOne({ id: req.params.id }).then((user) => res.send(user));
 };
 
-const getAllTreesFromUser = (req, res) => {
-  User.find({ userId: req.params.id }).then((user) => res.send(user));
-};
-
-module.exports = { createUser, getAllUsers, getUserById, getAllTreesFromUser };
+module.exports = { createUser, getAllUsers, getUserById };
