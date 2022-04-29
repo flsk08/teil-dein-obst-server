@@ -5,9 +5,7 @@ const createTree = (req, res) => {
     type,
     lat,
     lng,
-    strasse,
-    plz,
-    stadt,
+    address,
     status,
     info,
     start,
@@ -22,9 +20,7 @@ const createTree = (req, res) => {
       lng: lng,
     },
     location: {
-      strasse: strasse,
-      plz: plz,
-      stadt: stadt,
+      address: address
     },
     status: {
       status: status,

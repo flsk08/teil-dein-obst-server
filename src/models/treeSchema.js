@@ -8,9 +8,7 @@ const treeSchema = new Schema({
     lng: Schema.Types.Decimal128,
   },
   location: {
-    strasse: String,
-    plz: Number,
-    stadt: String,
+    address: String,
   },
   active: { type: Boolean, default: true },
   info: String,
