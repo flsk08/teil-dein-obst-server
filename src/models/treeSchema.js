@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const treeSchema = new Schema({
-  type: String,
+  type: Array,
   coordinates: {
     lat: Schema.Types.Decimal128,
     lng: Schema.Types.Decimal128,
