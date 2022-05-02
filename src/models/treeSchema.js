@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const treeSchema = new Schema({
@@ -16,6 +16,7 @@ const treeSchema = new Schema({
   picture: String,
   harvestPeriod: { start: String, end: String },
   userId: String,
+  pictureURL: String,
 });
 
-module.exports = mongoose.model("Tree", treeSchema);
+module.exports = mongoose.model('Tree', treeSchema);
