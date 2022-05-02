@@ -1,4 +1,4 @@
-const Tree = require("../models/treeSchema");
+const Tree = require('../models/treeSchema');
 
 const createTree = (req, res) => {
   const {
@@ -10,7 +10,8 @@ const createTree = (req, res) => {
     info,
     start,
     end,
-    ownerId,
+    userId,
+    pictureUrl,
   } = req.body;
 
   Tree.create({
@@ -20,14 +21,15 @@ const createTree = (req, res) => {
       lng: lng,
     },
     location: {
-      address: address
+      address: address,
     },
     status: {
       status: status,
     },
     info: info,
     harvestPeriod: { start: start, end: end },
-    ownderId: ownerId,
+    userId: userId,
+    pictureUrl: pictureUrl,
   }).then((tree) => res.send(tree));
 };
 
