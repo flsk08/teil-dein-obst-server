@@ -1,17 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const controller = require('../controller/tree');
+const controller = require("../controller/tree");
 
-router.post('/', controller.createTree);
+router.post("/", controller.createTree);
 
-router.get('/', controller.getAllTrees);
+router.get("/", controller.getAllTrees);
 
-router.get('/:id', controller.getTreeById);
+router.get("/:id", controller.getTreeById);
 
-router.get('/collection/:id', controller.getAllTreesFromUser);
+router.get("/collection/:id", controller.getAllTreesFromUser);
 
-router.put('/:id', controller.editTreeById)
+router.put("/:id", controller.deactivateTreeById);
 
-router.delete('/:id', controller.deleteTreeById)
+router.put("/:id/reactivate", controller.reactivateTreeById);
+
+router.delete("/:id", controller.deleteTreeById);
 
 module.exports = router;
