@@ -11,7 +11,7 @@ const createTree = (req, res) => {
     start,
     end,
     userId,
-    pictureUrl,
+    pictureURL,
   } = req.body;
 
   Tree.create({
@@ -29,7 +29,7 @@ const createTree = (req, res) => {
     info: info,
     harvestPeriod: { start: start, end: end },
     userId: userId,
-    pictureUrl: pictureUrl,
+    pictureURL: pictureURL,
   }).then((tree) => res.send(tree));
 };
 
