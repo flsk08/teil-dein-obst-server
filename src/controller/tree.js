@@ -34,4 +34,14 @@ const getAllTreesFromUser = (req, res) => {
   Tree.find({ userId: req.params.id }).then((user) => res.send(user));
 };
 
-module.exports = { createTree, getAllTrees, getTreeById, getAllTreesFromUser };
+const editTreeById = (req, res) => {
+  Tree.updateOne({ _id: req.params.id }, { $set: req.body }).then(
+    (tree) => res.send(tree)
+  );
+};
+
+const deleteTreeById = (req, res) => {
+  Tree.findByIdAndRemove({ _id: req.params.id }).then((tree) => res.send(tree));
+}
+
+module.exports = { createTree, getAllTrees, getTreeById, getAllTreesFromUser, editTreeById, deleteTreeById };

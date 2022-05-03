@@ -10,4 +10,8 @@ router.get('/:id', controller.getTreeById);
 
 router.get('/collection/:id', controller.getAllTreesFromUser);
 
+router.put('/:id', controller.editTreeById)
+
+router.delete('/:id', controller.deleteTreeById)
+
 module.exports = router;
