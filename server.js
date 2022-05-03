@@ -3,7 +3,6 @@ const { urlencoded } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
 const app = express();
 
 // config
@@ -19,7 +18,6 @@ app.use(urlencoded({ extended: true }));
 // routes
 app.use('/tree', require('./src/routes/tree'));
 app.use('/user', require('./src/routes/user'));
-app.use('/coordinates', require('./src/routes/coordinates'));
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
