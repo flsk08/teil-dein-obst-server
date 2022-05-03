@@ -1,4 +1,4 @@
-const Tree = require('../models/treeSchema');
+const Tree = require("../models/treeSchema");
 
 const createTree = (req, res) => {
   const {
@@ -6,7 +6,7 @@ const createTree = (req, res) => {
     lat,
     lng,
     address,
-    status,
+    active,
     info,
     start,
     end,
@@ -23,9 +23,7 @@ const createTree = (req, res) => {
     location: {
       address: address,
     },
-    status: {
-      status: status,
-    },
+    active: active,
     info: info,
     harvestPeriod: { start: start, end: end },
     userId: userId,
@@ -45,14 +43,28 @@ const getAllTreesFromUser = (req, res) => {
   Tree.find({ userId: req.params.id }).then((user) => res.send(user));
 };
 
-const editTreeById = (req, res) => {
-  Tree.updateOne({ _id: req.params.id }, { $set: req.body }).then(
+const deactivateTreeById = (req, res) => {
+  Tree.updateOne({ _id: req.params.id }, { $set: { active: false } }).then(
+    (tree) => res.send(tree)
+  );
+};
+
+const reactivateTreeById = (req, res) => {
+  Tree.updateOne({ _id: req.params.id }, { $set: { active: true } }).then(
     (tree) => res.send(tree)
   );
 };
 
 const deleteTreeById = (req, res) => {
   Tree.findByIdAndRemove({ _id: req.params.id }).then((tree) => res.send(tree));
-}
+};
 
-module.exports = { createTree, getAllTrees, getTreeById, getAllTreesFromUser, editTreeById, deleteTreeById };
+module.exports = {
+  createTree,
+  getAllTrees,
+  getTreeById,
+  getAllTreesFromUser,
+  deactivateTreeById,
+  reactivateTreeById,
+  deleteTreeById,
+};
