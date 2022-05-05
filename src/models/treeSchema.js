@@ -12,7 +12,6 @@ const treeSchema = new Schema({
   },
   active: { type: Boolean, default: true },
   info: String,
-  comments: Array,
   picture: String,
   harvestPeriod: { start: String, end: String },
   userId: String,
