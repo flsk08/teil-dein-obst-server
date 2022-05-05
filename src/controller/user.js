@@ -23,4 +23,11 @@ const getUserById = (req, res) => {
   User.findOne({ id: req.params.id }).then((user) => res.send(user));
 };
 
-module.exports = { createUser, getAllUsers, getUserById };
+const likeTree = (req, res) => {
+  User.updateOne(
+    { id: req.params.id },
+    { $push: { favorites: req.body.treeId } }
+  ).then((user) => res.send(user));
+};
+
+module.exports = { createUser, getAllUsers, getUserById, likeTree };

@@ -8,5 +8,6 @@ router.post('/:id', controller.createUser);
 
 router.get('/:id', controller.getUserById);
 
+router.put('/liketree/:id', controller.likeTree);
 
 module.exports = router;
