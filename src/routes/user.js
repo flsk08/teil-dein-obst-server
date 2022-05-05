@@ -10,4 +10,6 @@ router.get('/:id', controller.getUserById);
 
 router.put('/liketree/:id', controller.likeTree);
 
+router.put('/disliketree/:id', controller.dislikeTree);
+
 module.exports = router;

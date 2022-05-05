@@ -30,4 +30,17 @@ const likeTree = (req, res) => {
   ).then((user) => res.send(user));
 };
 
-module.exports = { createUser, getAllUsers, getUserById, likeTree };
+const dislikeTree = (req, res) => {
+  User.updateOne(
+    { id: req.params.id },
+    { $pull: { favorites: req.body.treeId } }
+  ).then((user) => res.send(user));
+};
+
+module.exports = {
+  createUser,
+  getAllUsers,
+  getUserById,
+  likeTree,
+  dislikeTree,
+};
