@@ -8,7 +8,7 @@ const app = express();
 // config
 require('dotenv').config();
 mongoose.connect(process.env.MONGO_URL);
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // middlewares
 app.use(express.json());
