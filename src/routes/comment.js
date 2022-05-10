@@ -8,4 +8,6 @@ router.get('/', controller.getAllComments);
 
 router.get('/:id', controller.getAllCommentsFromTree);
 
+router.put('/:id', controller.deleteComment);
+
 module.exports = router;
